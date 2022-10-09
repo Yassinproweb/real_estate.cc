@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/dist/main.css">
+    <!-- Fav-icon -->
+    <link rel="shortcut icon" href="/icons/fav_icon.svg" type="image/x-icon">
+
+    <title>Crawl Estates</title>
+</head>
+<body>
+    <nav class="navbar w-full px-7 py-3 fixed flex items-center justify-between z-30 bg-tail_dark lg:px-11 xl:px-28">
+        <div class="w-fit flex gap-1 items-center justify-center">
+            <img src="/icons/logo.svg" class="w-7 object-cover">
+            <h3 class="text-tail_light text-xl font-bold">Crawl <span class="text-tail_blue">Estates</span></h3>
+        </div>
+        <div class="nav_menu hidden flex-col gap-2 absolute top-16 right-3 bg-tail_dark rounded-md h-fit w-fit px-5 py-7 lg:flex lg:relative lg:top-0 lg:flex-row lg:py-0 lg:gap-4">
+            <a href="#" class="text-base text-tail_light text-center font-medium hover:text-tail_blue">Home</a>
+            <a href="#management" class="text-base text-tail_light text-center font-medium hover:text-tail_blue">Management</a>
+            <a href="#pricing" class="text-base text-tail_light text-center font-medium hover:text-tail_blue">Pricing</a>
+            <a href="#faqs" class="text-base text-tail_light text-center font-medium hover:text-tail_blue">FAQs</a>
+            <a href="#blog" class="text-base text-tail_light text-center font-medium hover:text-tail_blue">Blog</a>
+            <a href="#about" class="text-base text-tail_light text-center font-medium hover:text-tail_blue">Find More</a>
+        </div>
+        <button class="menu_btn w-8 h-8 cursor-pointer z-30 lg:hidden">
+            <img src="/icons/menu.svg" alt="" class="menu_open object-fit w-8 h-8">
+            <img src="/icons/close.svg" alt="" class="menu_close hidden object-fit w-8 h-8">
+        </button>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="w-full flex items-center justify-center h-fit xl:px-20">
+        <div class="px-5 pt-32 w-80 h-fit right-5 flex flex-col gap-3 my-7 xl:w-full xl:h-screen xl:items-end xl:gap-5">
+            <h1 class="text-tail_dark text-4xl font-bold w-60 lg:w-80">Discover a place you will love to live.</h1>
+            <p class="text-tail_dark text-md font-normal w-fit">Connect to morethan 57K property managers, with over 371K property available to let on this large platform.</p>
+            <div class="w-fit flex flex-col gap-5 items-center justify-center px-3 py-3 bg-tail_l_theme rounded-md xl:flex-row xl:flex">
+                <div class="w-64 flex gap-5 items-center justify-between p-1 rounded-md bg-tail_d_theme">
+                        <img src="/icons/home_location.svg" class="w-9 p-2 bg-tail_d_theme rounded-full">
+                        <div class="w-full flex flex-col gap-0 items-start justify-center">
+                            <h4 class="text-tail_dark text-lg font-semibold">Location</h4>
+                            <input type="text" list="location" placeholder="Central" class="w-full text-sm px-2 py-1 text-tail_dark bg-tail_d_theme outline-none rounded-md placeholder:text-tail_d_thru">
+                            <datalist id="location">
+                                <option value="Central" class="text-tail_dark text-base font-normal">
+                                <option value="Western" class="text-tail_dark text-base font-normal">
+                                <option value="Eastern" class="text-tail_dark text-base font-normal">
+                            </datalist>
+                        </div>
+                </div>
+                <div class="w-64 flex gap-5 items-center justify-between p-1 rounded-md bg-tail_d_theme">
+                        <img src="/icons/home_money.svg" class="w-9 p-2 bg-tail_d_theme rounded-full">
+                        <div class="w-full flex flex-col gap-0 items-start justify-center">
+                            <h4 class="text-tail_dark text-lg font-semibold">Price Range</h4>
+                            <input type="number" min="3000" max="357000" step="1500" placeholder="$3000 - $357000" class="w-full text-sm px-2 py-1 text-tail_dark bg-tail_d_theme outline-none rounded-md placeholder:text-tail_d_thru">
+                        </div>
+                </div>
+                <div class="w-64 flex gap-5 items-center justify-between p-1 rounded-md bg-tail_d_theme">
+                        <img src="/icons/home_house.svg" class="w-9 p-2 bg-tail_d_theme rounded-full">
+                        <div class="w-full flex flex-col gap-0 items-start justify-center">
+                            <h4 class="text-tail_dark text-lg font-semibold">Property Type</h4>
+                            <input type="text" list="home_type" placeholder="Rentals" class="w-full text-sm px-2 py-1 text-tail_dark bg-tail_d_theme outline-none rounded-md placeholder:text-tail_d_thru">
+                            <datalist id="home_type">
+                                <option value="Rentals" class="text-tail_dark text-base font-normal">
+                                <option value="Apartments" class="text-tail_dark text-base font-normal">
+                                <option value="Houses" class="text-tail_dark text-base font-normal">
+                            </datalist>
+                        </div>
+                </div>
+                <button class="w-fit p-3 bg-tail_dark rounded-lg">
+                    <img src="/icons/search.svg" class="w-7">
+                </button>
+            </div>
+            <div class="w-fit flex gap-3">
+                <div class="w-fit px-3 flex gap-2">
+                    <h3 class="text-tail_dark text-3xl font-bold">135k</h3>
+                    <p class="text-tail_dark text-sm font-normal">Property<br>To Let</p>
+                </div>
+                <div class="w-fit px-3 flex gap-2">
+                    <h3 class="text-tail_dark text-3xl font-bold">15k</h3>
+                    <p class="text-tail_dark text-sm font-normal">Happy<br>Customers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Management Section -->
+    <section id="management" class="w-full flex flex-col gap-7 px-5 py-7 lg:px-8 xl:px-28">
+        <h1 class="text-tail_blue opacity-30 text-base text-start font-medium">WHY CHOOSE CRAWL ESTATES?</h1>
+        <div class="flex gap-3 flex-col items-center justify-between px-3">
+            <h3 class="text-2xl text-tail_dark font-bold">Provides the most Complete set of Property</h3>
+            <p class="text-tail_d_thru text-sm font-normal">Find an ideal property that best suites your desires. Choose from houses & apartments for rent and for sale.</p>
+        </div>
+        <div class="flex flex-col gap-3 items-center justify-center lg:flex-row">
+            <div class="why_card flex flex-col gap-2 items-center justify-center w-64 px-5 py-9 rounded-lg">
+                <img src="/logo/mng_house.svg" class="w-11 opacity-75">
+                <h3 class="text-tail_dark text-center font-semibold text-lg">Find your dream House</h3>
+                <p class="text-tail_d_thru text-sm font-normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam nihil, eveniet mollitia!</p>
+            </div>
+            <div class="why_card flex flex-col gap-2 items-center justify-center w-64 px-5 py-9 rounded-lg">
+                <img src="/logo/mng_warehouse.svg" class="w-11 opacity-75">
+                <h3 class="text-tail_dark text-center font-semibold text-lg">Find a good Warehouse</h3>
+                <p class="text-tail_d_thru text-sm font-normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam nihil, eveniet mollitia!</p>
+            </div>
+            <div class="why_card flex flex-col gap-2 items-center justify-center w-64 px-5 py-9 rounded-lg">
+                <img src="/logo/mng_wallet.svg" class="w-11 opacity-75">
+                <h3 class="text-tail_dark text-center font-semibold text-lg">Smart Feature Rich</h3>
+                <p class="text-tail_d_thru text-sm font-normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam nihil, eveniet mollitia!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="w-full px-5 py-7 flex flex-col justify-center md:items-center lg:px-16">
+        <h1 class="text-tail_blue opacity-30 text-base text-start font-medium">PROPERTY</h1>
+        <div class="flex gap-3 flex-col items-start justify-between px-2 lg:flex-row lg:items-center lg:w-full xl:px-20">
+            <h3 class="text-2xl text-tail_dark font-bold">Property in Cities & Provinces in Africa</h3>
+            <a href="#" class="text-tail_dark text-sm font-normal transition-all flex gap-3 items-center hover_slide"><span>Explore All</span><img src="logo/point.svg" class="w-4"></a>
+        </div>
+        <div class="flex flex-col gap-3 items-center justify-center mt-5 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div class="card w-56 flex flex-col items-center justify-center gap-3 p-2 rounded-lg bg-tail_l_theme">
+                <div class="w-full flex relative flex-col gap-2 items-center justify-center">
+                    <img src="/assets/price_rental.jpg" class="w-full h-32 rounded-lg">
+                    <img src="/logo/bx-heart.svg" id="heart" class="cursor-pointer absolute w-9 rounded-3xl p-2 bg-tail_light top-3 right-3">
+                    <img src="/logo/bxs-heart.svg" id="heart1" class="cursor-pointer hidden absolute w-9 rounded-3xl p-2 bg-tail_light top-3 right-3">
+                    <div class="w-fit flex gap-3 self-start">
+                        <small class="text-tail_d_thru text-xs font-normal bg-tail_d_theme rounded-2xl px-3 py-2">Rentals</small>
+                        <small class="text-tail_d_thru text-xs font-normal bg-tail_d_theme rounded-2xl px-3 py-2">City</small>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col ml-3 items-start justify-center gap-0">
+                    <h3 class="text-tail_dark text-xl font-semibold text-left">$3,100/Month</h3>
+                    <p class="text-tail_d_thru text-sm font-normal text-left">Modern Rentals</p>
+                </div>
+                <div class="w-full flex gap-3 items-center justify-between px-3">
+                    <div class="w-fit flex items-center gap-1">
+                        <img src="/logo/bed.svg" class="w-7">
+                        <p class="text-tail_d_thru font-normal text-xs">3 Bedrooms</p>
+                    </div>
+                    <div class="w-fit flex items-center gap-1">
+                        <img src="/logo/bath.svg" class="w-5">
+                        <p class="text-tail_d_thru font-normal text-xs">3 Bathrooms</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card w-56 flex flex-col items-center justify-center gap-3 p-2 rounded-lg bg-tail_l_theme">
+                <div class="w-full flex relative flex-col gap-2 items-center justify-center">
+                    <img src="/assets/price_apartment.jpg" class="w-full h-32 rounded-lg">
+                    <img src="/logo/bx-heart.svg" id="heart" class="cursor-pointer absolute w-9 rounded-3xl p-2 bg-tail_light top-3 right-3">
+                    <img src="/logo/bxs-heart.svg" id="heart1" class="cursor-pointer hidden absolute w-9 rounded-3xl p-2 bg-tail_light top-3 right-3">
+                    <div class="w-fit flex gap-3 self-start">
+                        <small class="text-tail_d_thru text-xs font-normal bg-tail_d_theme rounded-2xl px-3 py-2">Apartments</small>
+                        <small class="text-tail_d_thru text-xs font-normal bg-tail_d_theme rounded-2xl px-3 py-2">City</small>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col ml-3 items-start justify-center gap-0">
+                    <h3 class="text-tail_dark text-xl font-semibold text-left">$5,300/Month</h3>
+                    <p class="text-tail_d_thru text-sm font-normal text-left">Modern Apartments</p>
+                </div>
+                <div class="w-full flex gap-3 items-center justify-between px-3">
+                    <div class="w-fit flex items-center gap-1">
+                        <img src="/logo/bed.svg" class="w-7">
+                        <p class="text-tail_d_thru font-normal text-xs">2 Bedrooms</p>
+                    </div>
+                    <div class="w-fit flex items-center gap-1">
+                        <img src="/logo/bath.svg" class="w-5">
+                        <p class="text-tail_d_thru font-normal text-xs">3 Bathrooms</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card w-56 flex flex-col items-center justify-center gap-3 p-2 rounded-lg bg-tail_l_theme">
+                <div class="w-full flex relative flex-col gap-2 items-center justify-center">
+                    <img src="/assets/price_house.jpg" class="w-full h-32 rounded-lg">
+                    <img src="/logo/bx-heart.svg" id="heart" class="cursor-pointer absolute w-9 rounded-3xl p-2 bg-tail_light top-3 right-3">
+                    <img src="/logo/bxs-heart.svg" id="heart1" class="cursor-pointer hidden absolute w-9 rounded-3xl p-2 bg-tail_light top-3 right-3">
+                    <div class="w-fit flex gap-3 self-start">
+                        <small class="text-tail_d_thru text-xs font-normal bg-tail_d_theme rounded-2xl px-3 py-2">Homes</small>
+                        <small class="text-tail_d_thru text-xs font-normal bg-tail_d_theme rounded-2xl px-3 py-2">Eastern</small>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col ml-3 items-start justify-center gap-0">
+                    <h3 class="text-tail_dark text-xl font-semibold text-left">$109,500</h3>
+                    <p class="text-tail_d_thru text-sm font-normal text-left">Countryside Home</p>
+                </div>
+                <div class="w-full flex gap-3 items-center justify-between px-3">
+                    <div class="w-fit flex items-center gap-1">
+                        <img src="/logo/bed.svg" class="w-7">
+                        <p class="text-tail_d_thru font-normal text-xs">4 Bedrooms</p>
+                    </div>
+                    <div class="w-fit flex items-center gap-1">
+                        <img src="/logo/bath.svg" class="w-5">
+                        <p class="text-tail_d_thru font-normal text-xs">5 Bathrooms</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card w-56 flex flex-col items-center justify-center gap-3 p-2 rounded-lg bg-tail_l_theme">
+                <div class="w-full flex relative flex-col gap-2 items-center justify-center">
+                    <img src="/assets/price_home.jpg" class="w-full h-32 rounded-lg">
+                    <img src="/logo/bx-heart.svg" id="heart" class="cursor-pointer absolute w-9 rounded-3xl p-2 bg-tail_light top-3 right-3">
+                    <img src="/logo/bxs-heart.svg" id="heart1" class="cursor-pointer hidden absolute w-9 rounded-3xl p-2 bg-tail_light top-3 right-3">
+                    <div class="w-fit flex gap-3 self-start">
+                        <small class="text-tail_d_thru text-xs font-normal bg-tail_d_theme rounded-2xl px-3 py-2">Homes</small>
+                        <small class="text-tail_d_thru text-xs font-normal bg-tail_d_theme rounded-2xl px-3 py-2">Western</small>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col ml-3 items-start justify-center gap-0">
+                    <h3 class="text-tail_dark text-xl font-semibold text-left">$103,100</h3>
+                    <p class="text-tail_d_thru text-sm font-normal text-left">Western Uplands</p>
+                </div>
+                <div class="w-full flex gap-3 items-center justify-between px-3">
+                    <div class="w-fit flex items-center gap-1">
+                        <img src="/logo/bed.svg" class="w-7">
+                        <p class="text-tail_d_thru font-normal text-xs">7 Bedrooms</p>
+                    </div>
+                    <div class="w-fit flex items-center gap-1">
+                        <img src="/logo/bath.svg" class="w-5">
+                        <p class="text-tail_d_thru font-normal text-xs">6 Bathrooms</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card w-56 flex flex-col items-center justify-center gap-3 p-2 rounded-lg bg-tail_l_theme">
+                <div class="w-full flex relative flex-col gap-2 items-center justify-center">
+                    <img src="/assets/price_villa.jpg" class="w-full h-32 rounded-lg">
+                    <img src="/logo/bx-heart.svg" id="heart" class="cursor-pointer absolute w-9 rounded-3xl p-2 bg-tail_light top-3 right-3">
+                    <img src="/logo/bxs-heart.svg" id="heart1" class="cursor-pointer hidden absolute w-9 rounded-3xl p-2 bg-tail_light top-3 right-3">
+                    <div class="w-fit flex gap-3 self-start">
+                        <small class="text-tail_d_thru text-xs font-normal bg-tail_d_theme rounded-2xl px-3 py-2">Villa</small>
+                        <small class="text-tail_d_thru text-xs font-normal bg-tail_d_theme rounded-2xl px-3 py-2">Mega-homes</small>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col ml-3 items-start justify-center gap-0">
+                    <h3 class="text-tail_dark text-xl font-semibold text-left">$313,100</h3>
+                    <p class="text-tail_d_thru text-sm font-normal text-left">Modern Rentals</p>
+                </div>
+                <div class="w-full flex gap-3 items-center justify-between px-3">
+                    <div class="w-fit flex items-center gap-1">
+                        <img src="/logo/bed.svg" class="w-7">
+                        <p class="text-tail_d_thru font-normal text-xs">11 Bedrooms</p>
+                    </div>
+                    <div class="w-fit flex items-center gap-1">
+                        <img src="/logo/bath.svg" class="w-5">
+                        <p class="text-tail_d_thru font-normal text-xs">13 Bathrooms</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card w-56 flex flex-col items-center justify-center gap-3 p-2 rounded-lg bg-tail_l_theme">
+                <div class="w-full flex relative flex-col gap-2 items-center justify-center">
+                    <img src="/assets/price_haus.jpg" class="w-full h-32 rounded-lg">
+                    <img src="/logo/bx-heart.svg" id="heart" class="cursor-pointer absolute w-9 rounded-3xl p-2 bg-tail_light top-3 right-3">
+                    <img src="/logo/bxs-heart.svg" id="heart1" class="cursor-pointer hidden absolute w-9 rounded-3xl p-2 bg-tail_light top-3 right-3">
+                    <div class="w-fit flex gap-3 self-start">
+                        <small class="text-tail_d_thru text-xs font-normal bg-tail_d_theme rounded-2xl px-3 py-2">Countryside</small>
+                        <small class="text-tail_d_thru text-xs font-normal bg-tail_d_theme rounded-2xl px-3 py-2">Central</small>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col ml-3 items-start justify-center gap-0">
+                    <h3 class="text-tail_dark text-xl font-semibold text-left">$93,700</h3>
+                    <p class="text-tail_d_thru text-sm font-normal text-left">Country Homes</p>
+                </div>
+                <div class="w-full flex gap-3 items-center justify-between px-3">
+                    <div class="w-fit flex items-center gap-1">
+                        <img src="/logo/bed.svg" class="w-7">
+                        <p class="text-tail_d_thru font-normal text-xs">3 Bedrooms</p>
+                    </div>
+                    <div class="w-fit flex items-center gap-1">
+                        <img src="/logo/bath.svg" class="w-5">
+                        <p class="text-tail_d_thru font-normal text-xs">2 Bathrooms</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card w-56 flex flex-col items-center justify-center gap-3 p-2 rounded-lg bg-tail_l_theme">
+                <div class="w-full flex relative flex-col gap-2 items-center justify-center">
+                    <img src="/assets/price_garage.jpg" class="w-full h-32 rounded-lg">
+                    <img src="/logo/bx-heart.svg" id="heart" class="cursor-pointer absolute w-9 rounded-3xl p-2 bg-tail_light top-3 right-3">
+                    <img src="/logo/bxs-heart.svg" id="heart1" class="cursor-pointer hidden absolute w-9 rounded-3xl p-2 bg-tail_light top-3 right-3">
+                    <div class="w-fit flex gap-3 self-start">
+                        <small class="text-tail_d_thru text-xs font-normal bg-tail_d_theme rounded-2xl px-3 py-2">Houses</small>
+                        <small class="text-tail_d_thru text-xs font-normal bg-tail_d_theme rounded-2xl px-3 py-2">Western</small>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col ml-3 items-start justify-center gap-0">
+                    <h3 class="text-tail_dark text-xl font-semibold text-left">$73,300</h3>
+                    <p class="text-tail_d_thru text-sm font-normal text-left">Village House</p>
+                </div>
+                <div class="w-full flex gap-3 items-center justify-between px-3">
+                    <div class="w-fit flex items-center gap-1">
+                        <img src="/logo/bed.svg" class="w-7">
+                        <p class="text-tail_d_thru font-normal text-xs">2 Bedrooms</p>
+                    </div>
+                    <div class="w-fit flex items-center gap-1">
+                        <img src="/logo/bath.svg" class="w-5">
+                        <p class="text-tail_d_thru font-normal text-xs">3 Bathrooms</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card w-56 flex flex-col items-center justify-center gap-3 p-2 rounded-lg bg-tail_l_theme">
+                <div class="w-full flex relative flex-col gap-2 items-center justify-center">
+                    <img src="/assets/price_mansion.jpg" class="w-full h-32 rounded-lg">
+                    <img src="/logo/bx-heart.svg" id="heart" class="cursor-pointer absolute w-9 rounded-3xl p-2 bg-tail_light top-3 right-3">
+                    <img src="/logo/bxs-heart.svg" id="heart1" class="cursor-pointer hidden absolute w-9 rounded-3xl p-2 bg-tail_light top-3 right-3">
+                    <div class="w-fit flex gap-3 self-start">
+                        <small class="text-tail_d_thru text-xs font-normal bg-tail_d_theme rounded-2xl px-3 py-2">Mansions</small>
+                        <small class="text-tail_d_thru text-xs font-normal bg-tail_d_theme rounded-2xl px-3 py-2">Eastern</small>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col ml-3 items-start justify-center gap-0">
+                    <h3 class="text-tail_dark text-xl font-semibold text-left">$353,100</h3>
+                    <p class="text-tail_d_thru text-sm font-normal text-left">Mega Mansions</p>
+                </div>
+                <div class="w-full flex gap-3 items-center justify-between px-3">
+                    <div class="w-fit flex items-center gap-1">
+                        <img src="/logo/bed.svg" class="w-7">
+                        <p class="text-tail_d_thru font-normal text-xs">13 Bedrooms</p>
+                    </div>
+                    <div class="w-fit flex items-center gap-1">
+                        <img src="/logo/bath.svg" class="w-5">
+                        <p class="text-tail_d_thru font-normal text-xs">12 Bathrooms</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section id="faqs" class="w-full flex flex-col items-center justify-center gap-5 px-3 py-5 lg:px-20 xl:px-36">
+        <h1 class="text-tail_blue text-left font-semibold text-md opacity-50">WHAT PEOPLE INQUIRE?</h1>
+        <div class="w-full flex flex-col items-center justify-center px-5 py-3 gap-5">
+            <div class="bottom_line w-full flex flex-col justify-center items-start gap-3">
+                <div class="w-full items-center flex gap-3 justify-between">
+                    <h3 class="text-tail_blue text-lg font-semibold">What is Crawl Estates?</h3>
+                    <div id="minmax" class="w-6 h-6 relative cursor-pointer bg-transparent">
+                        <img src="/icons/maximise.svg" id="min_max" class="absolute object-cover">
+                        <img src="/icons/minimise.svg" id="max_min" class="hidden absolute object-cover">
+                    </div>
+                </div>
+                <div class="relative">
+                    <p id="text" class="hidden text-tail_d_thru opacity-70 text-sm font-normal mb-3">Crawl Estates is a real estate platform that has been in service since 2013. We have sold over 117k property since then and hoping to sell more. We have been branded Africa's number one Real Estate Developers. Thank you for trusting Crawl Estates!!</p>
+                </div>
+            </div>
+            <div class="bottom_line w-full flex flex-col justify-center items-start gap-3">
+                <div class="w-full items-center flex gap-3 justify-between">
+                    <h3 class="text-tail_blue text-lg font-semibold">Why choose Crawl Estates?</h3>
+                    <div id="minmax" class="w-6 h-6 relative cursor-pointer bg-transparent">
+                        <img src="/icons/maximise.svg" id="min_max" class="absolute object-cover">
+                        <img src="/icons/minimise.svg" id="max_min" class="hidden absolute object-cover">
+                    </div>
+                </div>
+                <div class="relative">
+                    <p id="text" class="hidden text-tail_d_thru opacity-70 text-sm font-normal mb-3">Crawl Estates has a lot of trustworthy dealers with over 300k property available in places like major cities, countryside homes in Western and Eastern Africa. We also have the best customer care services and have a fast response of about 15 minutes from the initiation of your call.</p>
+                </div>
+            </div>
+            <div class="bottom_line w-full flex flex-col justify-center items-start gap-3">
+                <div class="w-full items-center flex gap-3 justify-between">
+                    <h3 class="text-tail_blue text-lg font-semibold">What are the best deals here?</h3>
+                    <div id="minmax" class="w-6 h-6 relative cursor-pointer bg-transparent">
+                        <img src="/icons/maximise.svg" id="min_max" class="absolute object-cover">
+                        <img src="/icons/minimise.svg" id="max_min" class="hidden absolute object-cover">
+                    </div>
+                </div>
+                <div class="relative">
+                    <p id="text" class="hidden text-tail_d_thru opacity-70 text-sm font-normal mb-3">The best deals at Crawl Estates are mostly available during the second quarter of the year. During this time, every property will have a discount of 5%. The first 5 customers are further given a free 3 months insurance relieve for insured property.</p>
+                </div>
+            </div>
+            <div class="bottom_line w-full flex flex-col justify-center items-start gap-3">
+                <div class="w-full items-center flex gap-3 justify-between">
+                    <h3 class="text-tail_blue text-lg font-semibold">Are all property here insured?</h3>
+                    <div id="minmax" class="w-6 h-6 relative cursor-pointer bg-transparent">
+                        <img src="/icons/maximise.svg" id="min_max" class="absolute object-cover">
+                        <img src="/icons/minimise.svg" id="max_min" class="hidden absolute object-cover">
+                    </div>
+                </div>
+                <div class="relative">
+                    <p id="text" class="hidden text-tail_d_thru opacity-70 text-sm font-normal mb-3">We would like to inform our customers that some property here at Crawl Estates are under insurance if you like one. The ones under insurance are cheaper by 10% than those that are not under insurance. Insurance services are offered by our own <a href="#" style="color: #2e2eff; font-style: italic;">Crawl Insurance Ltd</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="w-full flex flex-col gap-3 px-5 items-center justify-center py-7">
+        <h3 class="text-tail_blue text-md font-semibold opacity-50">BLOGS</h3>
+        <div class="w-full flex flex-col gap-3 justify-center md:flex-row md:justify-between md:px-7 lg:px-16 xl:px-36">
+            <h3 class="text-tail_dark text-2xl font-bold">Articles related to Aesthetic Home Design.</h3>
+            <button class="text-tail_dark text-sm bg-transparent flex gap-3 font-medium w-fit rounded-lg hover_slide">
+                <a href="">More Blogs</a>
+                <img src="/logo/point.svg" alt="" class="w-4">
+            </button>
+        </div>
+        <div class="w-full flex flex-col gap-3 justify-center items-center px-3 py-5 lg:justify-evenly lg:flex-row lg:px-16">
+            <div class="w-full flex flex-col gap-3 p-3 lg:w-fit">
+                <div class="w-full flex flex-col gap-3">
+                    <img src="/blogs/blog_dining.jpg" class="w-full rounded-xl max-w-sm md:max-w-sm lg:max-w-md">
+                    <blockquote class="text-tail_d_thru text-xs opacity-70">2nd August 2022</blockquote>
+                </div>
+                <h3 class="text-tail_blue text-md opacity-60 font-bold max-w-sm md:max-w-md lg:max-w-md">You will love our homes with perfectly designed Walls, Floors and Great Interior</h3>
+                <p class="text-tail_d_thru text-sm font-normal max-w-sm md:max-w-md lg:max-w-md">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia cumque a, itaque modi eveniet dignissimos quis fugit earum quo.</p>
+            </div>
+            <div class="w-full flex flex-col gap-3 p-3 lg:items-center lg:justify-center lg:w-fit">
+                <div class="w-full flex flex-col gap-3">
+                    <div class="w-full flex flex-col gap-3">
+                        <img src="/blogs/blog_out.jpg" class="w-full rounded-xl max-w-xs max-h-44">
+                        <blockquote class="text-tail_d_thru text-xs opacity-70">11 September 2022</blockquote>
+                    </div>
+                    <p class="text-tail_d_thru text-sm font-normal max-w-xs">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia cumque a, itaque modi eveniet dignissimos quis fugit earum quo.</p>
+                </div>
+                <div class="w-full flex flex-col gap-3">
+                    <div class="w-full flex flex-col gap-3">
+                        <img src="/blogs/blog_living.jpg" class="w-full rounded-xl max-w-xs max-h-44">
+                        <blockquote class="text-tail_d_thru text-xs opacity-70">15 May 2022</blockquote>
+                    </div>
+                    <p class="text-tail_d_thru text-sm font-normal max-w-xs">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia cumque a, itaque modi eveniet dignissimos quis fugit earum quo.</p>
+                </div>
+                <div class="w-full flex flex-col gap-3">
+                    <div class="w-full flex flex-col gap-3">
+                        <img src="/blogs/blog_sitting.jpg" class="w-full rounded-xl max-w-xs max-h-44">
+                        <blockquote class="text-tail_d_thru text-xs opacity-70">01 March 2022</blockquote>
+                    </div>
+                    <p class="text-tail_d_thru text-sm font-normal max-w-xs">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia cumque a, itaque modi eveniet dignissimos quis fugit earum quo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="w-full px-5 py-7 flex flex-col gap-5 relative bg-tail_d_theme lg:flex-row-reverse lg:px-32">
+        <img src="/blogs/undraw_house.svg" class="w-full lg:w-96">
+        <div class="w-full flex flex-col gap-5 justify-center">
+            <p class="text-tail_d_thru text-md font-semibold">Find Home With Us</p>
+            <h3 class="text-tail_dark text-xl font-semibold">Find the right home on over 300,000 property options.</h3>
+            <button class="w-fit py-2 px-4 bg-tail_dark text-tail_light text-sm rounded-lg">Find Now</button>
+        </div>
+    </section>
+
+    <!-- Footer Part -->
+    <footer id="footer" class="w-full flex flex-col pl-7 py-5 gap-5 bg-tail_dark lg:px-7 xl:px-28 xxl:px-44">
+        <div class="w-full flex flex-col gap-3">
+            <div class="flex flex-row gap-3 items-end justify-start">
+                <img src="/icons/fav_icon.svg" class="w-7 object-cover">
+                <h4 class="text-tail_light text-xl font-bold">Crawl Estates</h4>
+            </div>
+            <p class="text-tail_light text-sm font-normal">A great platform to get you to your dream home all around Africa.</p>
+        </div>
+        <div class="flex flex-col gap-5 items-start justify-center pb-7 footer_line lg:flex-row lg:justify-between">
+            <div class="w-80 flex flex-col gap-3 lg:w-fit">
+                <p class="text-tail_light text-md font-bold">Company</p>
+                <div class="w-full flex flex-col gap-0 pl-5">
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-sm text-tail_l_theme font-normal hover:text-tail_light">Home</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-sm text-tail_l_theme font-normal hover:text-tail_light">Management</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-sm text-tail_l_theme font-normal hover:text-tail_light">FAQs</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-sm text-tail_l_theme font-normal hover:text-tail_light">Blog</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-sm text-tail_l_theme font-normal hover:text-tail_light">About Us</a>
+                    </li>
+                </div>
+            </div>
+            <div class="w-80 flex flex-col gap-3 lg:w-fit">
+                <p class="text-tail_light text-md font-bold">Useful Links</p>
+                <div class="w-full flex flex-col gap-0 pl-5">
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" class="w-5 object-cover">
+                        <a href="#" class="text-sm text-tail_l_theme font-normal hover:text-tail_light">Terms of Service</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-sm text-tail_l_theme font-normal hover:text-tail_light">Privacy Policy</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-sm text-tail_l_theme font-normal hover:text-tail_light">Pricing</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-sm text-tail_l_theme font-normal hover:text-tail_light">Home Type</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-sm text-tail_l_theme font-normal hover:text-tail_light">Settlement Options</a>
+                    </li>
+                </div>
+            </div>
+            <div class="w-80 flex flex-col gap-3 lg:w-fit">
+                <p class="text-tail_light text-md font-bold">Crawl Support</p>
+                <div class="w-full flex flex-col gap-0 pl-5">
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-sm text-tail_l_theme font-normal hover:text-tail_light">Customer Help</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-sm text-tail_l_theme font-normal hover:text-tail_light">Partners</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-sm text-tail_l_theme font-normal hover:text-tail_light">Plots & Houses</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-sm text-tail_l_theme font-normal hover:text-tail_light">Location Details</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-sm text-tail_l_theme font-normal hover:text-tail_light">Best Offers</a>
+                    </li>
+                </div>
+            </div>
+            <div class="w-80 flex flex-col gap-3 lg:w-fit">
+                <p class="text-tail_light text-md font-bold">Contact Details</p>
+                <div class="w-full pl-5 flex gap-3 items-start">
+                    <img src="/icons/footer_location.svg" class="w-7">
+                    <p class="text-tail_l_theme text-sm font-normal">5th Street Wakaliga,<br>Plot 317,<br>Kampala, Uganda</p>
+                </div>
+                <div class="w-full pl-5 flex gap-3 items-start">
+                    <img src="/icons/footer_email.svg" class="w-7">
+                    <a href="mailto:yassinkatungi67@gmail.com" class="text-tail_l_theme text-sm font-normal">crawl_estates@gmail.com</a>
+                </div>
+                <div class="w-full pl-5 flex gap-3 items-start">
+                    <img src="/icons/footer_map.svg" class="w-7">
+                    <p class="text-tail_l_theme text-sm font-normal">We have many property and <br><a href="#" class="text-tail_blue text-sm font-normal">Find on Google Maps</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col gap-5 items-center self-center justify-self-center justify-center w-full">
+            <div class="flex gap-3 items-center justify-center">
+                <a href="http://www.facebook.com/CrawlEstates"><img src="/logo/facebook.svg" class="w-7 cursor-pointer opacity-75  hover:opacity-100"></a>
+                <a href="http://www.instagram.com/CrawlEstates"><img src="/logo/instagram.svg" class="w-7 cursor-pointer opacity-75  hover:opacity-100"></a>
+                <a href="http://www.linkedin.com/CrawlEstates"><img src="/logo/twitter.svg" class="w-7 cursor-pointer opacity-75 hover:opacity-100"></a>
+                <a href="http://www.twitter.com/CrawlEstates"><img src="/logo/whatsapp.svg" class="w-7 cursor-pointer opacity-75 hover:opacity-100"></a>
+                <a href="http://www.youtube.com/CrawlEstates"><img src="/logo/youtube.svg" class="w-7 cursor-pointer opacity-75 hover:opacity-100"></a>
+            </div>
+            <p class="text-tail_l_theme text-sm text-center font-normal">All Rights Reserved &copy;Crawl Estates Ltd. 2022</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

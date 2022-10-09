@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all .3s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Paytone One';
+}
+
+p, a, li, input, select, ::placeholder, button, blockquote, small {
+    font-family: 'Dosis';
+}
+
+::-webkit-scrollbar {
+    width: 9px;
+    background-color: #00001aee;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #c7c7ffcc;
+    border-radius: 5px;
+}
+
+/* Home Section */
+#home {
+    background: url('/assets/home_bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Management Section */
+.why_card {
+    box-shadow: 0 3px 11px #00001a22;
+}
+
+/* Pricing Section */
+.hover_effect:hover {
+    letter-spacing: 1px;
+    color: #c2c2ff;
+}
+
+.card {
+    border: 1px solid #00001a11;
+}
+
+/* FAQs Section */
+.bottom_line {
+    border-bottom: 1px solid #00001a22;
+}
+
+/* Blog Section */
+.hover_slide {
+    transition: all .1s;
+}
+
+.hover_slide:hover {
+    letter-spacing: 1px;
+}
+
+/* Footer Part */
+.footer_line  {
+    border-bottom: 1px solid #c7c7ff55;
+}
