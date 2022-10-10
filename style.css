@@ -16,11 +16,11 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Paytone One';
+    font-family: 'Paytone One', sans-serif;
 }
 
 p, a, li, input, select, ::placeholder, button, blockquote, small {
-    font-family: 'Dosis';
+    font-family: 'Dosis', sans-serif;
 }
 
 ::-webkit-scrollbar {
